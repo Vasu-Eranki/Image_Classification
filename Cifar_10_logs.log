@@ -1,0 +1,104 @@
+Requirement already satisfied: torchsummary in /usr/local/lib/python3.6/dist-packages (1.5.1)
+0it [00:00, ?it/s]Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
+170500096it [00:06, 27565456.60it/s]                               
+Extracting ./data/cifar-10-python.tar.gz to ./data
+Files already downloaded and verified
+CNN_classifier(
+  (conv1): Conv2d(3, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (gn1): GroupNorm(8, 16, eps=1e-05, affine=True)
+  (conv2): Conv2d(16, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (gn2): GroupNorm(32, 64, eps=1e-05, affine=True)
+  (conv3): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+  (gn3): GroupNorm(32, 64, eps=1e-05, affine=True)
+  (conv4): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  (gn4): GroupNorm(16, 32, eps=1e-05, affine=True)
+  (flatten): Flatten()
+  (fdn): Linear(in_features=512, out_features=10, bias=True)
+  (drop): Dropout2d(p=0.5, inplace=False)
+  (pool): MaxPool2d(kernel_size=4, stride=2, padding=1, dilation=1, ceil_mode=False)
+)
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 16, 16, 16]             784
+         GroupNorm-2           [-1, 16, 16, 16]              32
+         MaxPool2d-3             [-1, 16, 8, 8]               0
+            Conv2d-4             [-1, 64, 4, 4]          16,448
+         GroupNorm-5             [-1, 64, 4, 4]             128
+            Conv2d-6             [-1, 64, 4, 4]           4,160
+         GroupNorm-7             [-1, 64, 4, 4]             128
+            Conv2d-8             [-1, 32, 4, 4]           2,080
+         GroupNorm-9             [-1, 32, 4, 4]              64
+          Flatten-10                  [-1, 512]               0
+           Linear-11                   [-1, 10]           5,130
+================================================================
+Total params: 28,954
+Trainable params: 28,954
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.11
+Params size (MB): 0.11
+Estimated Total Size (MB): 0.24
+----------------------------------------------------------------
+None
+[1/50] [0/1563] Classification Loss: 2.314060
+[2/50] [0/1563] Classification Loss: 1.965989
+[3/50] [0/1563] Classification Loss: 1.896130
+[4/50] [0/1563] Classification Loss: 1.968375
+[5/50] [0/1563] Classification Loss: 2.034739
+[6/50] [0/1563] Classification Loss: 1.814829
+[7/50] [0/1563] Classification Loss: 1.775762
+[8/50] [0/1563] Classification Loss: 1.954241
+[9/50] [0/1563] Classification Loss: 1.946148
+[10/50] [0/1563] Classification Loss: 1.865529
+[11/50] [0/1563] Classification Loss: 1.933563
+[12/50] [0/1563] Classification Loss: 1.720962
+[13/50] [0/1563] Classification Loss: 1.814118
+[14/50] [0/1563] Classification Loss: 1.851952
+[15/50] [0/1563] Classification Loss: 1.849723
+[16/50] [0/1563] Classification Loss: 1.759121
+[17/50] [0/1563] Classification Loss: 1.733589
+[18/50] [0/1563] Classification Loss: 1.788456
+[19/50] [0/1563] Classification Loss: 1.775184
+[20/50] [0/1563] Classification Loss: 1.810479
+[21/50] [0/1563] Classification Loss: 1.803081
+[22/50] [0/1563] Classification Loss: 1.761567
+[23/50] [0/1563] Classification Loss: 1.855029
+[24/50] [0/1563] Classification Loss: 1.732138
+[25/50] [0/1563] Classification Loss: 1.928768
+[26/50] [0/1563] Classification Loss: 1.707675
+[27/50] [0/1563] Classification Loss: 1.752000
+[28/50] [0/1563] Classification Loss: 1.875537
+[29/50] [0/1563] Classification Loss: 1.863023
+[30/50] [0/1563] Classification Loss: 1.722441
+[31/50] [0/1563] Classification Loss: 1.710740
+[32/50] [0/1563] Classification Loss: 1.646222
+[33/50] [0/1563] Classification Loss: 1.743669
+[34/50] [0/1563] Classification Loss: 1.827544
+[35/50] [0/1563] Classification Loss: 1.744079
+[36/50] [0/1563] Classification Loss: 1.820496
+[37/50] [0/1563] Classification Loss: 1.733722
+[38/50] [0/1563] Classification Loss: 1.832833
+[39/50] [0/1563] Classification Loss: 1.764956
+[40/50] [0/1563] Classification Loss: 1.690578
+[41/50] [0/1563] Classification Loss: 1.636372
+[42/50] [0/1563] Classification Loss: 1.732566
+[43/50] [0/1563] Classification Loss: 1.781366
+[44/50] [0/1563] Classification Loss: 1.854749
+[45/50] [0/1563] Classification Loss: 1.629601
+[46/50] [0/1563] Classification Loss: 1.751888
+[47/50] [0/1563] Classification Loss: 1.723973
+[48/50] [0/1563] Classification Loss: 1.754849
+[49/50] [0/1563] Classification Loss: 1.763465
+[50/50] [0/1563] Classification Loss: 1.738945
+Accuracy of Plane is 71.8543046357616
+Accuracy of Car is 73.91304347826087
+Accuracy of Bird is 50.595238095238095
+Accuracy of Cat is 44.8051948051948
+Accuracy of Deer is 64.48598130841121
+Accuracy of Dog is 55.59105431309904
+Accuracy of Frog is 74.34210526315789
+Accuracy of Horse is 74.03846153846153
+Accuracy of Ship is 79.36507936507937
+Accuracy of Truck is 72.8125
